@@ -33,6 +33,22 @@
 // Feel free to add helper functions if needed.
 
 
+var i=0
 var bubbleSort = function(array) {
-  // Your code here.
-};
+   // var i = i || 0, tmp;
+
+  //base case if reached the second end of the array 
+if(i >= array.length-2){
+	return array
+ }
+//swapp the first with the second if its bigger
+if( array[i] > array[i+1] ){
+	tmp = array[i]
+	array[i] = array[i+1]
+	array[i+1] = tmp;
+}
+
+i++;
+//recursion
+return bubbleSort(array)
+}
