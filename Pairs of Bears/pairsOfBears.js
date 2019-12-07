@@ -22,7 +22,8 @@ x will always be a positive integer, and s will never be empty
 */
 
 var Mating = function(number, str) {
-	var arr = str.split('') , result =[]
+	var arr = str.split('') , result =[] , statuse = false
+	
 
 	for (var i = 0; i < arr.length; i++) {
 		if((arr[i] === "B" && arr[i+1]=== "8") || (arr[i] === "8" && arr[i+1]=== "B")){
@@ -31,9 +32,9 @@ var Mating = function(number, str) {
 	}
 
 	if(result.length === number){
-		return true
+		status = false
 	}
 
-	return false 
+	return result.join() +' ,'+status
 
 }
