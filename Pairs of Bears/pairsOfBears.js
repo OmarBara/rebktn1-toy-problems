@@ -20,3 +20,20 @@ x will always be a positive integer, and s will never be empty
 
 
 */
+
+var Mating = function(number, str) {
+	var arr = str.split('') , result =[]
+
+	for (var i = 0; i < arr.length; i++) {
+		if((arr[i] === "B" && arr[i+1]=== "8") || (arr[i] === "8" && arr[i+1]=== "B")){
+			result.push([arr[i],arr[i+1]])			
+		}
+	}
+
+	if(result.length === number){
+		return true
+	}
+
+	return false 
+
+}
