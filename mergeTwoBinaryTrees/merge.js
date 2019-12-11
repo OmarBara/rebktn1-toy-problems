@@ -24,16 +24,45 @@ Merged tree:
 Note: The merging process must start from the root nodes of both trees.
 */
 
-/**
+/*
  * Definition for a binary tree node.
  * function TreeNode(val) {
  *     this.val = val;
  *     this.left = this.right = null;
  * }
- */
+ 
 /**
  * @param {TreeNode} t1
  * @param {TreeNode} t2
  * @return {TreeNode}
  */
-var mergeTrees = function(t1, t2) {};
+var mergeTrees = function(t1, t2) {
+	//copy t1 to TreeNode
+	var TreeNode ={} ,Object.assign(TreeNode,t1)
+
+	var find = function() {
+
+		if(t1.value || t2.value) {
+			TreeNode += t2.val
+		}
+		else if(val < t1.value || val < t2.value){
+			if(t1.left){
+				return t1.left.find()
+			}
+			if(t2.left){
+				return t2.left.find()
+			}
+		}
+		else if(val > t1.value || val > t2.value){
+			if(t1.right){
+				return t1.right.find()
+			}
+			if(t2.right){
+				return t2.right.find()
+			}
+		}
+	
+	}
+	return TreeNode;
+
+};
