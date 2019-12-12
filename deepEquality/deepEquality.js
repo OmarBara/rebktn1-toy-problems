@@ -12,4 +12,17 @@
   *
   */
 var deepEquals = function(apple, orange) {
-};
+  for(var key in apple){
+     for(var key2 in apple[key]){
+      if(orange[key] === 'undefined' || orange[key][key2] === 'undefined'){
+        return 'erroe'  
+      }
+    console.log(orange[key],orange[key][key2])  
+    }
+  }
+}
+
+
+
+
+
