@@ -7,4 +7,22 @@ largestProductOfThree([ 0, 2, 3 ]) //	0
 largestProductOfThree([1, 4, -5, -2]) // 40
 */
 
-function largestProductOfThree(array) {}
+function largestProductOfThree(array) {
+	var totalProduct = 1; tempArray = []
+	//total value of product all elements
+	for (var i = 0; i < array.length; i++) {
+		totalProduct *= array[i] 
+	}
+
+
+	//subtract one element to get the result for the other elements
+	for (var i = 0; i < array.length; i++) {
+		if(array[i] === 0){
+			continue
+		}
+		tempArray.push( totalProduct/array[i])
+	}
+
+	//find the biggest number
+	return Math.max(...tempArray)
+}
