@@ -33,7 +33,19 @@
 
 'use strict';
 
-var compose = function() {
+	var i = i || 0
+var compose = function(...fu) {
+
+	function (loop) {
+	if (arguments.length === 0){
+		return
+	}
+	i++
+	// return compose(arguments[0].slice(1))
+	arguments[0].slice(1)
+   }
+	return fu
+
 };
 
 var pipe = function() {
