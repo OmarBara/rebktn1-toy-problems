@@ -36,9 +36,25 @@ var Tree = function(value) {
 };
 
 
+Tree.prototype.BFSelect = function(filter, depth ) {
+  
+  var array = array || [] 
 
-Tree.prototype.BFSelect = function(filter) {
-  // return an array of values for which the function filter(value, depth) returns true
+   if(filter(this.value)){
+    array.push(this.value)
+   }
+    
+    //base case
+    if(this.children.length === 0){
+      return
+    }
+    for (var i = 0; i < this.children.length; i++) {
+      var child = this.children[i];
+      array.push(filter(child.value, depth))
+      child.FSelect(filter(value, depth));
+    }    
+
+  return array
 };
 
 /**
