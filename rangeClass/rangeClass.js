@@ -39,10 +39,32 @@
  */
 
 
-var Range = function(start, end, step) {
+var Range = class{
+	constructor(start, end, step = 1){
+		this.start = start;
+		this.end   = end;
+		this.step  = step;
+		
+	    this.storage = []
+	}
+
+
+
+for(this.start; i <= this.end; i= i + this.step) {
+	this.storage.push(i)
+}
+
+
 };
 
 Range.prototype.size = function () {
+if(!this.step){
+	this.step = 1;
+}
+for (var i = start; i <= end; i= i + this.step) {
+	this.storage.push(i)
+}
+	
 };
 
 Range.prototype.each = function (callback) {
