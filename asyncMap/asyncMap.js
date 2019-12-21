@@ -37,6 +37,12 @@
  *
  */
 
-
-var asyncMap = function(tasks, callback) {
-};
+function asyncMap(tasks, callback){
+	//using promise
+  var arr = tasks.map(function(task){
+    return new Promise(task);
+  });
+  
+   console.log(Promise.all(arr)
+  )
+}
