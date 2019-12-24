@@ -9,4 +9,23 @@ isBalanced("(50)(") // false
 isBalanced("[{]}") // false
 */
 
-var isBalanced = function(str) {};
+var isBalanced = function(str) {
+
+	var paranthesis = 0, curly = 0, square = 0;
+
+	var open ={"{":0, '(':0, '[':0};
+
+	for (var i = 0; i < str.length; i++) {
+	 	if(str[i] === '{' || str[i] === '(' || str[i] === '['){
+	 		curly++;
+	 	}
+	    if(str[i] === '}' || str[i] === ')' || str[i] === ']'){
+	 		curly--;
+	 	}
+	 }
+
+	if(curly > 0){
+	 	return false;
+	 }
+	 return true;
+};
