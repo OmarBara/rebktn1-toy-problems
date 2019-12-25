@@ -18,7 +18,28 @@
 *
 */
 
-var rockPaperScissors = function (
-) {
+var rockPaperScissors = function (number) {
   // TODO: your solution here
+  var rock ='R' ,resultArr =[]
+  var obj ={0:'R' ,1:'P' ,2:'S'}
+  var string = rock.repeat(number)
+  var arr = string.split('')  
+ 
+
+  var repeat = function(number){
+
+  	for (var i = 0; i < arr.length; i++) {
+  		for (var j = arr.length - 1; j >= 0; j--) {
+  			arr.splice(j,1,obj[i%3])
+  			resultArr.push(arr)
+	 	 	console.log(arr)
+  		}
+  	} 
+  	if(number = 0){
+  		return resultArr
+  	} 
+  }
+
+
+return repeat(number-1)
 };
