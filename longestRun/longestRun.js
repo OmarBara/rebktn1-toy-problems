@@ -12,6 +12,7 @@ longestRun("abcdefgh") // [ 0, 0 ]
 longestRun("abccccccc") // [ 2, 8 ]
 */
 
+<<<<<<< HEAD
 function longestRun(string) {
 	var obj = {}
 	//count the repeted charachters and asssign it to the object
@@ -25,3 +26,8 @@ var arr = Object.keys( obj ).map(function(key) {
 
 var max = Math.max(...arr)
 }
+=======
+
+
+
+>>>>>>> 7358c78edba3c993773b7de22c6cc1c2bb42aaae
