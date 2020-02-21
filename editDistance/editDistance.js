@@ -9,11 +9,24 @@ editDistance("cat", "cut") // 1
 
 editDistance("wednesday", "sunday") // 5
 
-editDistance("hackerrank", "hackreactor") // 6
+editDistance("hackerrank","hackreactor") // 6
 
 For more information check out this article: https://en.wikipedia.org/wiki/Levenshtein_distance
 */
 
 function editDistance(str1, str2) {
     // your code here...
+
+    if(str2 === str1){
+    	return 0
+    }
+
+    for (var i = 0; i < str1.length; i++) {
+    	var reg = new RegExp(str1.slice(0, i), 'g')
+    	if(!str2.match(reg)){
+    		return str1.length - i
+
+    	}
+
+    }
 }

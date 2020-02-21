@@ -31,6 +31,7 @@ function BinaryHeap() {
 }
 // This function works just fine and shouldn't be modified
 BinaryHeap.prototype.getRoot = function () {
+	
 }
 BinaryHeap.prototype.insert = function (value) {
     // TODO: Your code here

@@ -55,4 +55,10 @@ var numbersToPlace = {
 
 function numberToEnglish(number) {
   // your code here...
+  var result;
+  for (var key in numbersToWords) {
+    if (key === number) {
+      return console.log(numbersToWords[key]);
+    }
+  }
 }
